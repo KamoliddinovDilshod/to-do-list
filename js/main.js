@@ -17,7 +17,7 @@ elForm.addEventListener("submit" ,function(evt){
   newinput.style.width = "500px";
   newinput.style.padding = "15px 5px";
   newinput.style.marginLeft="150px";
-  newinput.value = " ";
+  newinput.value = null;
   elTask.appendChild(newinput);
   
   var newBtn = document.createElement("button");
@@ -29,12 +29,19 @@ elForm.addEventListener("submit" ,function(evt){
   newBtn.style.backgroundColor= "green";
   newBtn.style.borderRadius= "10px";
   
-  var newEl = document.createElement("li");
-  elList.appendChild(newEl);
-  newEl.textContent = newinput;
-
-});
-
-elTask.addEventListener("submit",function(sub){
-  sub.preventDefault();
+  elTask.addEventListener("submit",function(sub){
+    sub.preventDefault();
+    var newEl = document.createElement("li");
+    elList.appendChild(newEl);
+    newEl.textContent = newinput;
+    newEl.innerHTML = newinput.value;
+    newinput.value = null;
+    newinput.style.display="inline-block";
+    newEl.style.color = "blue";
+    newEl.style.borderColor = "blue";
+    newEl.style.borderRadius = "10px";
+    newEl.style.width = "500px";
+    newEl.style.padding = "7px ";
+    newEl.style.marginLeft="150px";
+  });
 });
