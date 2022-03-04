@@ -1,0 +1,26 @@
+.hero{
+  position: fixed;
+  height: 100%;
+  background-color: #17a338;
+  padding: 50px 0;
+}
+
+.hero__title-box{
+  width: 300px;
+}
+
+.hero__title{
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.hero__btn{
+  display:block;
+  font-size: 18px;
+  background-color: #17a338;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 23px;
+}
